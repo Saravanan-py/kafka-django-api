@@ -8,7 +8,7 @@ def consumer(category):
     consumer = KafkaConsumer(
         bootstrap_servers=["localhost:9092", 'localhost:9093', 'localhost:9094'],
         value_deserializer=lambda m: json.loads(m.decode('utf-8')),
-        auto_offset_reset="latest"
+        auto_offset_reset="earliest"
     )
     consumer.subscribe(topic)
     print("Waiting for location details.....")
