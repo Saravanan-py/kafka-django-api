@@ -20,7 +20,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('home/', views.home),
-    path('producer/',views.EmployeeAPI.as_view()),
+    path('producer/',views.ProducerAPI.as_view()),
     path('consumer/', views.ConsumerAPI.as_view()),
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 ]
